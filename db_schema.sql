@@ -357,7 +357,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES ('PR4192','D1183','Makeup','SKU9763','Maybelline New York Super Stay',1,10,NULL,NULL,88,'Matte ink lip color',438,300,_binary 'maybellinenylip.jpg'),('PR4298','D1183','Beauty appliances','SKU76G2','T3 Featherweight',1,247,NULL,NULL,5,'Hair dryer with 2 speed settings, 3 heat settings and a 2-year warranty',87,20,_binary 'T3hairdryerwhite.png'),('PR4394','D1145','Sneakers','SKU8723','Under Armour Micro G running shoes',1,67,NULL,NULL,12,'Black running shoes with rubber sole & breathable mesh',566,66,_binary 'underarmourblack.jpg'),('PR4467','D1178','Adaptor','SKUGNXW','Poweradd power converter',1,30,NULL,NULL,701,'2-outlet universal travel adapter',5000,20,_binary 'poweraddconverter.png'),('PR4689','D1145','Jewelery','SKU7263','10k Rose Gold plated white Gold Diamond ring',1,538,NULL,NULL,83766,'0.75cttw, I-J Color, I2-I3 Clarity',30,4,_binary 'diamondring.png'),('PR4769','D1178','Tablet','SKU6789','Kindle Paperwhite',1,140,NULL,NULL,767,'Tablet with 6\" high-resolution display with builtin light',3987,200,_binary 'kindle.jpg'),('PR4789','D1178','Laptop','SKUB00V','ASUS Chromebook C201',1,270,NULL,NULL,18,'11.6 inch latop, navy blue',4534,445,_binary 'asuschromebook.png');
+INSERT INTO `product` VALUES ('PR4192','D1183','Makeup','SKU9763','Maybelline New York Super Stay',1,10,46,38,88,'Matte ink lip color',438,300,_binary 'maybellinenylip.jpg'),('PR4298','D1183','Beauty appliances','SKU76G2','T3 Featherweight',1,247,1130,935,5,'Hair dryer with 2 speed settings, 3 heat settings and a 2-year warranty',87,20,_binary 'T3hairdryerwhite.png'),('PR4394','D1145','Sneakers','SKU8723','Under Armour Micro G running shoes',1,67,307,254,12,'Black running shoes with rubber sole & breathable mesh',566,66,_binary 'underarmourblack.jpg'),('PR4467','D1178','Adaptor','SKUGNXW','Poweradd power converter',1,30,137,114,701,'2-outlet universal travel adapter',5000,20,_binary 'poweraddconverter.png'),('PR4689','D1145','Jewelery','SKU7263','10k Rose Gold plated white Gold Diamond ring',1,538,2462,2037,83766,'0.75cttw, I-J Color, I2-I3 Clarity',30,4,_binary 'diamondring.png'),('PR4769','D1178','Tablet','SKU6789','Kindle Paperwhite',1,140,641,530,767,'Tablet with 6\" high-resolution display with builtin light',3987,200,_binary 'kindle.jpg'),('PR4789','D1178','Laptop','SKUB00V','ASUS Chromebook C201',1,270,1236,1022,18,'11.6 inch latop, navy blue',4534,445,_binary 'asuschromebook.png');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -539,4 +539,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-07 20:03:11
+-- Dump completed on 2021-05-09 20:35:15
