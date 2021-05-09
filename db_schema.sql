@@ -36,16 +36,6 @@ CREATE TABLE `address` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `address`
---
-
-LOCK TABLES `address` WRITE;
-/*!40000 ALTER TABLE `address` DISABLE KEYS */;
-INSERT INTO `address` VALUES ('AD123','US2348','WORK','987 business avenue','Vancouver','British Columbia','Canada','G6H 7S9'),('AD146','US2784','BILLING','972 long road','Dawson Creek','Calgary','Canada','D7B S3H'),('AD276','US2498','HOME','11 rodeo blvd','Saskatoon','Saskatchewan','Canada','J7C 2X7'),('AD432','US2123','BILLING','129 shore street','Sherbrooke','Quebec','Canada','H3S B7S'),('AD552','US2498','SHIPPING','10873 butterfly street','Gotham','Saskatchewan','Canada','D7C 1D6'),('AD7982','US2895','HOME','876 apple drive','Montreal','Quebec','Canada','H7D 9S3'),('AD873','US2435','SHIPPING','397 hustle drive','Kahnawake','Quebec','Canada','F7B 2D8');
-/*!40000 ALTER TABLE `address` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `buyers`
 --
 
@@ -67,16 +57,6 @@ CREATE TABLE `buyers` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `buyers`
---
-
-LOCK TABLES `buyers` WRITE;
-/*!40000 ALTER TABLE `buyers` DISABLE KEYS */;
-INSERT INTO `buyers` VALUES ('B3656','US2098','B',NULL,'Sean','Romero','519-556-9422','sean.rom@other.com'),('B3465','US2123','B','M1458','Georges','Bienvenu','555-098-7638','gbienvenu@email.com'),('B3680','US2213','B','M1178','Ginette','Beauregard','514-098-8334','beauregard.ginette@other.com'),('B3326','US2348','B','M1318','Nancy','Book','555-868-8379','booknancy@other.com'),('B3342','US2435','B',NULL,'Daniel','Dam','074-515-5458','ddam@email.com'),('B3432','US2456','B','M1968','Elise','Fort','919-887-0965','elise.f@email.com'),('B3442','US2498','B',NULL,'Yung','Xi','250-753-0094','xi.yung@email.com'),('B3765','US2654','B','M1867','Taylor','Swing','012-3370697','swing@email.com'),('B3998','US2784','B','M1957','Red','Forman','972-670-3345','redismad@email.com'),('B3568','US2874','B','M1568','Jack','Smith','676-876-0094','js@email.com'),('B3235','US2895','B','M1642','Sarah','Mansour','037-146-2742','sarahsarah@other.com');
-/*!40000 ALTER TABLE `buyers` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `department`
 --
 
@@ -90,16 +70,6 @@ CREATE TABLE `department` (
   PRIMARY KEY (`DepartmentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `department`
---
-
-LOCK TABLES `department` WRITE;
-/*!40000 ALTER TABLE `department` DISABLE KEYS */;
-INSERT INTO `department` VALUES ('D1145','Fashion','Corinne Levis'),('D1173','Home','Sarah Lola'),('D1178','Electronics','John Doe'),('D1183','Beauty','France Dupuis'),('D1567','Books','Michael Grant');
-/*!40000 ALTER TABLE `department` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `discount`
@@ -116,16 +86,6 @@ CREATE TABLE `discount` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `discount`
---
-
-LOCK TABLES `discount` WRITE;
-/*!40000 ALTER TABLE `discount` DISABLE KEYS */;
-INSERT INTO `discount` VALUES ('DSCT10',0.10),('DSCT25',0.25),('DSCT50',0.50);
-/*!40000 ALTER TABLE `discount` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `membership`
 --
 
@@ -138,16 +98,6 @@ CREATE TABLE `membership` (
   PRIMARY KEY (`MembershipID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `membership`
---
-
-LOCK TABLES `membership` WRITE;
-/*!40000 ALTER TABLE `membership` DISABLE KEYS */;
-INSERT INTO `membership` VALUES ('M1178','PREMIUM'),('M1298','PREMIUM'),('M1318','STUDENT'),('M1322','STUDENT'),('M1458','STUDENT'),('M1499','PREMIUM'),('M1568','BUSINESS'),('M1642','PREMIUM'),('M1867','STUDENT'),('M1884','PREMIUM'),('M1957','OLD AGE'),('M1968','STUDENT');
-/*!40000 ALTER TABLE `membership` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `offer`
@@ -165,16 +115,6 @@ CREATE TABLE `offer` (
   KEY `fk_Product_has_Discount_Product1_idx` (`ProductID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `offer`
---
-
-LOCK TABLES `offer` WRITE;
-/*!40000 ALTER TABLE `offer` DISABLE KEYS */;
-INSERT INTO `offer` VALUES ('O101','PR8796','DSCT10'),('O102','PR8765','DSCT25'),('O103','PR8786','DSCT50');
-/*!40000 ALTER TABLE `offer` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `orders`
@@ -203,16 +143,6 @@ CREATE TABLE `orders` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `orders`
---
-
-LOCK TABLES `orders` WRITE;
-/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
-INSERT INTO `orders` VALUES ('OR6018','US2654','SH17648','2017-06-27','2017-07-05',13,6,'2017-02-26 15:30:36','complete',59,'2017-06-27',2),('OR6091','US2435','SH17626','2017-06-26','2017-07-05',4,5,'2017-02-27 15:30:35','complete',90,'2017-06-26',3),('OR6182','US2124','SH17648','2017-02-22','2017-03-06',25,25,'2017-02-26 15:30:33','complete',326,'2017-02-27',4),('OR6534','US2123','SH17648','2017-02-22','2017-03-04',0,4,'2017-02-26 15:30:31','complete',36,'2017-02-27',2),('OR6676','US2498','SH17526','2017-02-24','2017-03-05',25,25,'2017-02-26 15:30:32','complete',235,'2017-02-27',1),('OR6906','US2098','SH17648','2017-06-28','2017-07-05',21,11,'2017-02-27 15:30:37','complete',124,'2017-06-28',6),('OR6986','US2895','SH17526','2017-06-25','2017-07-05',99,6,'2017-02-27 15:30:34','complete',746,'2017-06-27',1);
-/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `orders_has_product`
 --
 
@@ -230,16 +160,6 @@ CREATE TABLE `orders_has_product` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `orders_has_product`
---
-
-LOCK TABLES `orders_has_product` WRITE;
-/*!40000 ALTER TABLE `orders_has_product` DISABLE KEYS */;
-INSERT INTO `orders_has_product` VALUES ('OP1234','OR6091','PR4298'),('OP2394','OR6534','PR4394'),('OP2589','OR6182','PR4192'),('OP6723','OR6534','PR4789'),('OP9999','OR6018','PR4689');
-/*!40000 ALTER TABLE `orders_has_product` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `payment`
 --
 
@@ -254,16 +174,6 @@ CREATE TABLE `payment` (
   KEY `OrderID_idx` (`OrderID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `payment`
---
-
-LOCK TABLES `payment` WRITE;
-/*!40000 ALTER TABLE `payment` DISABLE KEYS */;
-INSERT INTO `payment` VALUES ('P7332','OR6906','C'),('P7565','OR6986','C'),('P7768','OR6676','C'),('P7836','OR6534','G'),('P7853','OR6018','C'),('P7864','OR6182','A'),('P7865','OR6091','C');
-/*!40000 ALTER TABLE `payment` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `payment_creditcard`
@@ -288,16 +198,6 @@ CREATE TABLE `payment_creditcard` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `payment_creditcard`
---
-
-LOCK TABLES `payment_creditcard` WRITE;
-/*!40000 ALTER TABLE `payment_creditcard` DISABLE KEYS */;
-INSERT INTO `payment_creditcard` VALUES ('CC4586','P7565','4510655885838439',9,2019,'238','123 TREE STREET','SPRINGFIELD','S7F 2V8'),('CC4791','P7768','4510934832848328',10,2018,'345','876 RUE BEAUBIEN','MONTREAL','H7F 6V2'),('CC4897','P7853','5590649276962332',3,2020,'456','387 PAPINEAU DRIVE','VANCOUVER','D8V 0D2'),('CC5434','P7865','5590778844927402',3,2022,'866','143 OAKLAND ROAD','QUEBEC','F7B 3V9'),('CC5967','P7332','8930384039459342',6,2018,'285','5119 ARCHER BLVD','MEMPHIS','G9V 2B7');
-/*!40000 ALTER TABLE `payment_creditcard` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `payment_giftcard`
 --
 
@@ -314,16 +214,6 @@ CREATE TABLE `payment_giftcard` (
   KEY `PaymentID_idx` (`PaymentID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `payment_giftcard`
---
-
-LOCK TABLES `payment_giftcard` WRITE;
-/*!40000 ALTER TABLE `payment_giftcard` DISABLE KEYS */;
-INSERT INTO `payment_giftcard` VALUES ('G764','P7836','4556 8598 9698','12','2020');
-/*!40000 ALTER TABLE `payment_giftcard` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `product`
@@ -352,16 +242,6 @@ CREATE TABLE `product` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `product`
---
-
-LOCK TABLES `product` WRITE;
-/*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES ('PR4192','D1183','Makeup','SKU9763','Maybelline New York Super Stay',1,10,46,38,88,'Matte ink lip color',438,300,_binary 'maybellinenylip.jpg'),('PR4298','D1183','Beauty appliances','SKU76G2','T3 Featherweight',1,247,1130,935,5,'Hair dryer with 2 speed settings, 3 heat settings and a 2-year warranty',87,20,_binary 'T3hairdryerwhite.png'),('PR4394','D1145','Sneakers','SKU8723','Under Armour Micro G running shoes',1,67,307,254,12,'Black running shoes with rubber sole & breathable mesh',566,66,_binary 'underarmourblack.jpg'),('PR4467','D1178','Adaptor','SKUGNXW','Poweradd power converter',1,30,137,114,701,'2-outlet universal travel adapter',5000,20,_binary 'poweraddconverter.png'),('PR4689','D1145','Jewelery','SKU7263','10k Rose Gold plated white Gold Diamond ring',1,538,2462,2037,83766,'0.75cttw, I-J Color, I2-I3 Clarity',30,4,_binary 'diamondring.png'),('PR4769','D1178','Tablet','SKU6789','Kindle Paperwhite',1,140,641,530,767,'Tablet with 6\" high-resolution display with builtin light',3987,200,_binary 'kindle.jpg'),('PR4789','D1178','Laptop','SKUB00V','ASUS Chromebook C201',1,270,1236,1022,18,'11.6 inch latop, navy blue',4534,445,_binary 'asuschromebook.png');
-/*!40000 ALTER TABLE `product` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `reviews`
 --
 
@@ -376,16 +256,6 @@ CREATE TABLE `reviews` (
   PRIMARY KEY (`ReviewID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `reviews`
---
-
-LOCK TABLES `reviews` WRITE;
-/*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
-INSERT INTO `reviews` VALUES ('R419','PR4192','Great opacity. Very matte.',4),('R429','PR4467','hated it. went to get reimursed',2),('R439','PR4394','Glad this shoe fit as well as it does.',4),('R468','PR4689','I love the engagement ring!',5),('R517','PR4769','Great product.',3);
-/*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `sellers`
@@ -415,16 +285,6 @@ CREATE TABLE `sellers` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `sellers`
---
-
-LOCK TABLES `sellers` WRITE;
-/*!40000 ALTER TABLE `sellers` DISABLE KEYS */;
-INSERT INTO `sellers` VALUES ('S2193','U2738','S','Sell Your Junk Inc','Suzy','Gold','Owner of Company','555-232-2381','suzy.gold@selljunk.com',NULL),('S6283','U2837','S','The Fun Shop','Frank','DiMaggio','Representative','555-827-2832','f.dimaggio@funshop.com',NULL),('S6381','U2883','S','Shop Til You Drop','Charlie','Sweet','Representative','555-347-2381','sweet.charles@shop.com',NULL);
-/*!40000 ALTER TABLE `sellers` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `shipper`
 --
 
@@ -442,16 +302,6 @@ CREATE TABLE `shipper` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `shipper`
---
-
-LOCK TABLES `shipper` WRITE;
-/*!40000 ALTER TABLE `shipper` DISABLE KEYS */;
-INSERT INTO `shipper` VALUES ('SH1752','Frank shipments Inc.','Rosie Chianti','332-431-3452'),('SH1762','Worldwide Delivery Service','Paola Ricardo','242-241-2423'),('SH1764','Ship for Cheap','Ronald McDime','555-634-2342');
-/*!40000 ALTER TABLE `shipper` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `shopping cart`
 --
 
@@ -466,16 +316,6 @@ CREATE TABLE `shopping cart` (
   KEY `ProductID_idx` (`ProductID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `shopping cart`
---
-
-LOCK TABLES `shopping cart` WRITE;
-/*!40000 ALTER TABLE `shopping cart` DISABLE KEYS */;
-INSERT INTO `shopping cart` VALUES ('SC7099','PR7786','CONFIRMED'),('SC7100','PR4769','SAVED'),('SC7656','PR7786','PENDING'),('SC7680','PR4769','PENDING'),('SC7786','PR7680','CONFIRMED');
-/*!40000 ALTER TABLE `shopping cart` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `users`
@@ -496,16 +336,6 @@ CREATE TABLE `users` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `users`
---
-
-LOCK TABLES `users` WRITE;
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES ('US2098','Sean','Romero','B','OUVO8V','2003-02-16'),('US2123','Georges','Bienvenu','B','LKGCKF','2016-03-21'),('US2124','Georges','Bienvenu','B','YVUOT7D','2009-11-28'),('US2193','Sell','Junk','S','pyg8p7','2013-02-18'),('US2213','Ginette','Beauregard','B','KGHCY','2012-03-02'),('US2348','Nancy','Book','B','LHSBDJ','2000-12-12'),('US2435','Daniel','Dam','B','8IVYIGV','2016-12-13'),('US2456','Elise','Fort','B','QOWUDHC','2004-02-24'),('US2498','Yung','Xi','B','Y8VP8VY','2010-10-10'),('US2654','Taylor','Swing','B','8YVIKV','2017-01-26'),('US2784','Red','Forman','B','97VIYGV','2003-12-30'),('US2874','Jack','Smith','B','LKEHDJK','2011-08-02'),('US2895','Sarah','Mansour','B','P8YVUUG','2017-07-02'),('US6283','Fun','Shop','S','LWIEYFG','2003-03-24'),('US6381','Shop','Drop','S','P8EUBW','2015-09-15');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `wishlist`
 --
 
@@ -519,16 +349,6 @@ CREATE TABLE `wishlist` (
   KEY `ProductID_idx` (`ProductID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `wishlist`
---
-
-LOCK TABLES `wishlist` WRITE;
-/*!40000 ALTER TABLE `wishlist` DISABLE KEYS */;
-INSERT INTO `wishlist` VALUES ('W832','PR4467'),('W602','PR4769'),('W652','PR4789');
-/*!40000 ALTER TABLE `wishlist` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -539,4 +359,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-09 20:35:15
+-- Dump completed on 2021-05-09 20:50:25
