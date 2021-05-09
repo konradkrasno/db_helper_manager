@@ -4,3 +4,6 @@ __pycache__/
 venv/
 logs/
 products.csv
+build/
+dist/
+src/db_helper_manager_konradkrasno.egg-info
