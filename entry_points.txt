@@ -1,0 +1,2 @@
+[console_scripts]
+db_helper_manager = db_helper_manager.main:main
